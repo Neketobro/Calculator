@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    background: #e0e0e0;
+    font-family: sans-serif;
+    color: black;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    font-family: "Sofadi One", system-ui;
+}
+.head-wrapper {
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #c2c2c2;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 14px #666666, -12px -12px 20px #ffff
+}
+
+.head-wrapper>h1 {
+    font-size: 5vh;
+    padding: 10px 20px;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+    background: #d3d3d3;
+    box-shadow: inset 6px 6px 12px #666666, inset -6px -6px 12px #ffffff;
+
+    animation: title 5s alternate infinite;
+}
+
+@keyframes title {
+    0% {
+        letter-spacing: 1px;
+        left: 35%;
+    }
+    50% {
+        letter-spacing: 15px;
+        left: 50%;
+    }
+    100% {
+        letter-spacing: 1px;
+        left: 65%;
+    }
+}
+
+main {
+    width: 100%;
+    height: 90%;
+    display: flex;    
+}
+
+.calculator-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    width: 40vh;
+    height: 50vh;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 40px;
+    border: 1px solid #c2c2c2;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 14px #666666, -6px -6px 14px #ffffff;
+}
+.display {
+    width: 100%;
+    height: 12vh;
+    position: relative;
+    /* overflow: hidden; */
+
+    grid-column: 1/6;
+
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+    background: #d3d3d3;
+    box-shadow: inset 6px 6px 12px #666666, inset -6px -6px 12px #ffffff;
+}
+.display-value {
+    width: 95%;
+    font-size: 7vh;
+    background: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: .5vw;
+    
+}
+
+.btn {
+    width: 7vh;
+    height: 7vh;
+    font-size: 2.5vh;
+    cursor: pointer;
+    transition: all .2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+    background: #dddddd;
+    box-shadow:  6px 6px 10px #666666, -6px -6px 16px #ffffff;
+}
+.btn-complies {
+    width: 16vh;
+    height: 7vh;
+    grid-column: 4/6;
+}
+.btn-number-1, .btn-number-2, .btn-number-3,
+.btn-number-4, .btn-number-5, .btn-number-6, 
+.btn-number-7, .btn-number-8, .btn-number-9, 
+.btn-zero {
+    background: #e0e0e0;
+}
+.btn:hover {
+    background: #cfcfcf;
+}
+.btn:active {
+    transform: scale(0.9);
+}
